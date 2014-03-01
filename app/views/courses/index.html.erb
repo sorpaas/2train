@@ -1,21 +1,20 @@
-<h1>All Courses</h1>
-<table>
-  <tr>
-    <th>User Name</th>
-    <th>Skill</th>
-    <th>Location</th>
-    <th>Date/Time</th>
-    <th>Certification</th>
-  </tr>
-  <% @courses.each do |course| %>
-  <tr>
-    <td><%= "#{course.user.first_name} #{course.user.last_name}" %></td>
-    <td><%= course.skill %></td>
-    <td><%= course.location %></td>
-    <td><%= course.datetime %></td>
-    <td><a href="<%= course.certification_url %>">Click here</a></td>
-  </tr>
-  <% end %>
-</table>
+<div class="featurette">
+  <div class="container">
+    <h1>All Courses</h1>
+    <% @courses.each do |course| %>
+    <div class="col-md-12">
+      <div class="featurette-item">
+        <h4>Skill <%= course.skill %></h4>
+        <em><%= course.datetime %></em>
+        <% if course.user %>
+        <p>Will be taught by <%= course.user.first_name%> <%= course.user.last_name %></p>
+        <% end %>
+        <p>At Location <%= course.location %></p>
+        <p>In the time <%= course.datetime %></p>
+      </div>
+    </div>
+    <% end %>
 
-<%= link_to "Back", "/" %>
+    <%= link_to "Back", "/" %>
+  </div>
+</div>
