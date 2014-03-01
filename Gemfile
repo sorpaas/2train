@@ -10,6 +10,9 @@ gem 'pg', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'less-rails'
+gem 'haml-rails'
+gem 'therubyracer'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -35,6 +38,7 @@ group :doc do
 end
 
 gem 'devise'
+gem 'bootstrap_forms'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

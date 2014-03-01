@@ -10,5 +10,16 @@ class RequestsController < ApplicationController
   
   def index
     @requests = Request.all
+    if user_signed_in?
+      @requests = @requests.select do |request|
+        value = false
+        current_user.courses.each do |course|
+          if request.skill.include? course.skill
+            value = true
+          end
+        end
+        value
+      end
+    end
   end
 end

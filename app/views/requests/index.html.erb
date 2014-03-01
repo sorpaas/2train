@@ -1,15 +1,25 @@
-<h1>All Requests</h1>
-<table>
-  <tr>
-    <th>Skill</th>
-    <th>Location</th>
-  </tr>
-  <% @requests.each do |request| %>
-  <tr>
-    <td><%= request.skill %></td>
-    <td><%= request.location %></td>
-  </tr>
-  <% end %>
-</table>
+<div class="featurette">
+  <div class="container">
+    <% if user_signed_in? %>
+    <h1>Matched Requests</h1>
+    <p>These people are interested in your skills.</p>
+    <% else %>
+    <h1>All Requests</h1>
+    <% end %>
+    <br>
+    <div class="row">
+    <% @requests.each do |request| %>
+    <div class="col-md-12">
+      <div class="featurette-item">
+        <h4><%= "Skill: #{request.skill}" %></h4>
+        <em><%= "Requested at: #{request.created_at}"%></em>
+        <p><%= "In location: #{request.location}" %></p>
+        <br>
+      </div>
+    </div>
+    <% end %>
+    </div>
 
-<%= link_to "New", url_for(action: :new) %>
+    <%= link_to "New", url_for(action: :new) %>
+  </div>
+</div>

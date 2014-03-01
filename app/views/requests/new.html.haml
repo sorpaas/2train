@@ -1,0 +1,10 @@
+%div{class:"blurb bright"}
+  %div{class:"container"}
+    %h1="Add Request"
+    = bootstrap_form_for @request, style: 'inline' do |request|
+      = request.email_field :email, :inline => true
+      = request.text_field :skill, :inline => true
+      = request.text_field :location, :inline => true
+      %br
+      = request.actions do
+        = request.submit 'Add'
