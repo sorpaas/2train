@@ -9,6 +9,9 @@ Vagrant::Application.routes.draw do
   get "requests/new" => "requests#new"
   post "requests" => "requests#create"
   
+  get "courses/:id/take" => "courses#take"
+  post "requests/:id/response" => "requests#recomment"
+  get "requests/:id" => "requests#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

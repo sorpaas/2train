@@ -5,12 +5,12 @@
     <div class="col-md-12">
       <div class="featurette-item">
         <h4>Skill <%= course.skill %></h4>
-        <em><%= course.datetime %></em>
+        <p><em><%= course.datetime %>, <%= course.number || "0" %> person(s) want to take the course.</em></p>
         <% if course.user %>
-        <p>Will be taught by <%= course.user.first_name%> <%= course.user.last_name %></p>
+        <p>Will be taught by <%= course.user.first_name%> <%= course.user.last_name %>.
         <% end %>
-        <p>At Location <%= course.location %></p>
-        <p>In the time <%= course.datetime %></p>
+        At Location <%= course.location %>, In the time <%= course.datetime %></p>
+        <a href="/courses/<%= course.id %>/take" class="btn btn-primary">Take the course</a>
       </div>
     </div>
     <% end %>

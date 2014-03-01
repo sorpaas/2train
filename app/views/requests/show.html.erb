@@ -1,0 +1,26 @@
+<div class="blurb bright">
+  <div class="container">
+    <h1><%= "Skill: #{@request.skill}" %></h1>
+    <em><%= "Requested at: #{@request.created_at}"%></em>
+    <p><%= "In location: #{@request.location}" %></p>
+    
+    <% @request.comments.each do |comment| %>
+    <div class="col-md-12">
+      <div class="featurette-item">
+        <h4>From <% comment.user.first_name %></h4>
+        <p><%= comment.message %></p>
+        <br>
+      </div>
+    </div>
+    <% end %>
+    
+    <% if user_signed_in? %>
+    <%= bootstrap_form_for Comment.new, url: {action: :recomment}, method: :post do |comment| %>
+    <%= comment.text_area :message %>
+    <%= comment.submit "Response" %>
+    <% end %>
+    <% end %>
+
+    <%= link_to "Back", url_for(action: :index) %>
+  </div>
+</div>

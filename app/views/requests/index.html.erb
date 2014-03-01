@@ -14,6 +14,9 @@
         <h4><%= "Skill: #{request.skill}" %></h4>
         <em><%= "Requested at: #{request.created_at}"%></em>
         <p><%= "In location: #{request.location}" %></p>
+        <% if user_signed_in? %>
+        <a href="/requests/<%= request.id %>" class="btn btn-primary">Response</a>
+        <% end %>
         <br>
       </div>
     </div>
