@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  skill: MyString
+  location: MyString
+  datetime: MyString
+  certification_url: MyString
+
+two:
+  skill: MyString
+  location: MyString
+  datetime: MyString
+  certification_url: MyString

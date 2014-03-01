@@ -1,0 +1,15 @@
+<h1>All Requests</h1>
+<table>
+  <tr>
+    <th>Skill</th>
+    <th>Location</th>
+  </tr>
+  <% @requests.each do |request| %>
+  <tr>
+    <td><%= request.skill %></td>
+    <td><%= request.location %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to action: :new %>

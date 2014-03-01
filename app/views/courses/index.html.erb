@@ -1,0 +1,21 @@
+<h1>All Courses</h1>
+<table>
+  <tr>
+    <th>User Name</th>
+    <th>Skill</th>
+    <th>Location</th>
+    <th>Date/Time</th>
+    <th>Certification</th>
+  </tr>
+  <% @courses.each do |course| %>
+  <tr>
+    <td><%= "#{course.user.first_name} #{course.user.last_name}" %></td>
+    <td><%= course.skill %></td>
+    <td><%= course.location %></td>
+    <td><%= course.datetime %></td>
+    <td><a href="<%= course.certification_url %>">Click here</a></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Back", "/" %>
