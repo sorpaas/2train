@@ -1,0 +1,116 @@
+body {
+	font: 1em/150% Arial, Helvetica, sans-serif;
+}
+a {
+	color: #669;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1 {
+	font: bold 36px/100% Arial, Helvetica, sans-serif;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+#header1 {
+	height: 66px;
+}
+#header2 {
+	height: 482px;
+	background-image: url('/res/img/01-callig.png');
+	background-position: center;
+}
+#content {
+	width: 900px;
+	position: relative;
+	margin-left: 30px;
+	top: -165px;
+	padding-top: 50px;
+}
+
+#content-left {
+	width: 50%;
+	float:left;
+	text-align: center;
+}
+#content-right {
+	width: 50%;
+	float:right;
+	text-align: center;
+}
+
+#footer {
+	clear: both;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 95%;
+	}
+
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+}
+
+/* border & guideline (you can ignore these) */
+#content {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	background-color:rgba(255, 255, 255, 0.5);
+
+	border: 3px solid rgba(160, 160, 160, .5);
+
+	height: 320px;
+}
+#header1, #content, #sidebar {
+	margin-bottom: 5px;
+}
+#pagewrap, #header, #content, #sidebar, #footer {
+
+}
+
+.button-red {
+	width: 250px;
+	height: 75px;
+	background-color: rgb(255, 0, 0);
+	border-width: 0px;
+
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	font-size: 16px;
+}

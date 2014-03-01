@@ -1,6 +1,28 @@
-<h1>Hobby Hub</h1>
-<p>Your hobbies are not just hobbies.</p>
-<%= link_to "I am a teacher", "users/sign_up" %><br>
-<%= link_to "I am a student", "requests/new"%><br><br>
-<%= link_to "About", 'about' %>
-<%= link_to "Contact", 'contact' %>
+<div id="pagewrap">
+
+	<div id="header1">
+		<img src="/res/img/hh.png" />
+	</div>
+	<div id="header2">
+		&nbsp;
+	</div>
+
+	<div id="content">
+		<div id="content-left">
+			<button onclick="window.location.href='/users/sign_up'" class="button-red">Share your passion</button>
+			<br />
+			...and make money!
+
+		</div>
+		<div id="content-right">
+			<button onclick="window.location.href='/requests/new'" class="button-red">Learn new Skill</button>
+			<br />
+			...on a budget!
+
+		</div>
+	</div>
+	
+	<div id="footer">
+	</div>
+
+</div>
